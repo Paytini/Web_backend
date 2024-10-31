@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "db": "node src/config/db.js",
+    "consul": "node src/consulta.js"
   },
   "keywords": [],
   "author": "",

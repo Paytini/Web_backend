@@ -1,6 +1,16 @@
 const express = require('express');
 const path = require('path');
-const rutas = require('../src/routes/index');  // Importa las rutas de la API
+const sequelize = require('../src/config/db');
+const {Curso, Alumno, Profesor} = require('../src/models/asociaciones');
+const rutas = require('../src/routes/index');
+
+// sequelize.sync({ force: false })
+//     .then(() => {
+//         console.log('Tablas sincronizadas con éxito.');
+//     })
+//     .catch(err => {
+//         console.error('Error al sincronizar tablas:', err);
+//     });
 
 const app = express();
 
@@ -12,3 +22,5 @@ const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Servidor corriendo en http://localhost:${PORT}`);
 });
+
+

@@ -7,6 +7,10 @@ function findAll() {
     return profesores;
 }
 
+function add(profesor) {
+    profesores.push(profesor);
+}
+
 function findById(id) {
     return profesores.find(profesor => profesor.id === id);
 }
@@ -31,6 +35,7 @@ function eliminarCurso(profesorId, cursoId) {
 
 module.exports = {
     findAll,
+    add,
     findById,
     agregarCurso,
     eliminarCurso
