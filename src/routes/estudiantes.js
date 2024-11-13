@@ -9,5 +9,6 @@ router.post('/estudiantes', estudiantesController.createEstudiante);
 router.put('/estudiantes/:id', estudiantesController.updateEstudiante);
 router.patch('/estudiantes/:id', estudiantesController.patchEstudiante);
 router.delete('/estudiantes/:id', estudiantesController.deleteEstudiante);
+router.get('/:matricula/kardex', estudiantesController.getKardexEstudiante);
 
 module.exports = router;
